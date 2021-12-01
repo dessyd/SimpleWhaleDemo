@@ -17,4 +17,3 @@ jobs:
         if: startsWith(github.ref, 'refs/heads/main')
         with:
           files: Release.txt
-#
