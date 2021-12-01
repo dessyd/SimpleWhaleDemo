@@ -20,7 +20,7 @@ jobs:
       - name: Test
         run: cat Release.txt
       - name: Create spl
-        run: touch /tmp/test.spl
+        run: tar -cvzf /tmp/app.spl Release.txt
 
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
@@ -28,4 +28,4 @@ jobs:
           prerelease: false
           files: |
             Release.txt
-            /tmp/test.spl
+            /tmp/app.spl
